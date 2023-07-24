@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password-Protected Page</title>
+</head>
+<body>
+  <h1>Password-Protected Page</h1>
+  <div id="passwordForm">
+    <label for="password">Enter the password:</label>
+    <input type="password" id="password" name="password">
+    <button type="button" onclick="checkPassword()">Submit</button>
+  </div>
+
+  <div id="accessGranted" style="display: none;">
+    <!-- List of MP3 files here -->
+    <!-- Replace this with your actual MP3 directory content -->
+    <h2>MP3 Files:</h2>
+    <ul>
+      <li href="[RECORNOT]-EDITS_MP3/TORO - EL COLUMPIO ASESINO_ANDREVII-REMIX_[RECORNOT]-EDIT.mp3">Example MP3 1</li>
+      <li>Example MP3 2</li>
+      <!-- Add more items as needed -->
+    </ul>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      // Replace "0101" with the correct password
+      if (password === "0101") {
+        document.getElementById("passwordForm").style.display = "none";
+        document.getElementById("accessGranted").style.display = "block";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
