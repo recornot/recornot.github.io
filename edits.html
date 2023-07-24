@@ -8,20 +8,33 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-</style>
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      body {
+        background-size: contain;
+      }
+
+      #passwordForm {
+        margin-top: 10%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      #passwordForm {
+        margin-top: 5%;
+      }
+    }
+  </style>
   
 </head>
 <body>
-  <h1 style="
-    /* display: -webkit-inline-box; */
-    text-align: center;
-    color: white;
-">[RECORNOT] MP3 EDITS</h1>
-  <div id="passwordForm" style="
-    text-align: center;
-    margin-top: 32%;
-    color: white;
-">
+  <h1 style="text-align: center; color: white;">[RECORNOT] MP3 EDITS</h1>
+  <div id="passwordForm" style="text-align: center; margin-top: 32%; color: white;">
     <label for="password">Enter the password:</label>
     <input type="password" id="password" name="password">
     <button type="button" onclick="checkPassword()">Submit</button>
@@ -30,13 +43,11 @@
   <div id="accessGranted" style="display: none;">
     <!-- List of MP3 files here -->
     <!-- Replace this with your actual MP3 directory content -->
-    <h2 style="
-    text-align: center;
-">MP3 Files:</h2>
+    <h2 style="text-align: center;">MP3 Files:</h2>
     <ul>
-      <li style="
-    list-style-type: none;
-"><a href="EDITS/TORO-EL_COLUMPIO_ASESINO_ANDREVII-REMIX_[RECORNOT]-EDIT.mp3" download>Toro · El Columpio Asesino (Andre VII Remix & RECORNOT Edit)</a></li>
+      <li style="list-style-type: none;">
+        <a href="EDITS/TORO-EL_COLUMPIO_ASESINO_ANDREVII-REMIX_[RECORNOT]-EDIT.mp3" download>Toro · El Columpio Asesino (Andre VII Remix & RECORNOT Edit)</a>
+      </li>
       <!-- <li><a href="EDITS/Toro_El-Columpio-Asesino_AndreVII-Remix_RECORNOT-EDIT.mp3" download>Example MP3 2</a></li> -->
       <!-- Add more items as needed -->
     </ul>
